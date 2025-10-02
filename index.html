@@ -1,0 +1,692 @@
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คุณเป็นนักการเมืองสไตล์ไหน?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">🏛️ คุณเป็นนักการเมืองสไตล์ไหน?</h1>
+                <p class="subtitle">ทดสอบบุคลิกภาพผู้นำทางการเมืองของคุณ</p>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="currentQuestion">1</span> / <span id="totalQuestions">23</span>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <form id="politicalStyleForm" class="quiz-form">
+            <!-- Email Field -->
+            <div class="question-card active" data-question="1">
+                <div class="question-content">
+                    <h2 class="question-title">📧 อีเมลของคุณ</h2>
+                    <div class="input-group">
+                        <input type="email" name="emailAddress" id="email" required class="text-input">
+                        <label for="email" class="input-label">กรุณาระบุอีเมลของคุณ</label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Age Field -->
+            <div class="question-card" data-question="2">
+                <div class="question-content">
+                    <h2 class="question-title">🎂 อายุของคุณ</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202020" value="ต่ำกว่า 18" required>
+                            <span class="option-text">ต่ำกว่า 18</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202020" value="18 - 24" required>
+                            <span class="option-text">18 - 24</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202020" value="25 - 34" required>
+                            <span class="option-text">25 - 34</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202020" value="35 - 44" required>
+                            <span class="option-text">35 - 44</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202020" value="45 - 54" required>
+                            <span class="option-text">45 - 54</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202020" value="55 ขึ้นไป" required>
+                            <span class="option-text">55 ขึ้นไป</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 3: Economic Crisis -->
+            <div class="question-card" data-question="3">
+                <div class="question-content">
+                    <h2 class="question-title">💰 หากเกิดวิฤตเศรษฐกิจ คุณจะ…?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202021" value="L1: ตัดสินใจเด็ดขาดเอง" required>
+                            <span class="option-text">L1: ตัดสินใจเด็ดขาดเอง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202021" value="L2: เปิดให้ประชาชนร่วมตัดสินใจ" required>
+                            <span class="option-text">L2: เปิดให้ประชาชนร่วมตัดสินใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202021" value="L3: ใช้วิสัยทัศน์สร้างแรงบันดาลใจ" required>
+                            <span class="option-text">L3: ใช้วิสัยทัศน์สร้างแรงบันดาลใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202021" value="L4: เน้นกฎระเบียบและการควบคุม" required>
+                            <span class="option-text">L4: เน้นกฎระเบียบและการควบคุม</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 4: Team Conflict -->
+            <div class="question-card" data-question="4">
+                <div class="question-content">
+                    <h2 class="question-title">🤝 เมื่อมีความขัดแย้งในทีม คุณจะ..?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202022" value="L1: ใช้อำนาจสั่งการ" required>
+                            <span class="option-text">L1: ใช้อำนาจสั่งการ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202022" value="L2: ให้ทุกฝ่ายถกเถียงและหาข้อตกลง" required>
+                            <span class="option-text">L2: ให้ทุกฝ่ายถกเถียงและหาข้อตกลง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202022" value="L3: ผู้สร้างแรงจูงใจให้ทีมรวมใจ" required>
+                            <span class="option-text">L3: ผู้สร้างแรงจูงใจให้ทีมรวมใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202022" value="L4: อ้างอิงกฎหมาย บทลงโทษ" required>
+                            <span class="option-text">L4: อ้างอิงกฎหมาย บทลงโทษ</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 5: Task Distribution -->
+            <div class="question-card" data-question="5">
+                <div class="question-content">
+                    <h2 class="question-title">📋 การกระจายหน้าที่ที่คุณชอบคือ..?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202023" value="L1: แบ่งหน้าที่ให้ชัดเจน ใครทำอะไร" required>
+                            <span class="option-text">L1: แบ่งหน้าที่ให้ชัดเจน ใครทำอะไร</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202023" value="L2: เปิดโอกาสให้เสนอและเลือกเอง" required>
+                            <span class="option-text">L2: เปิดโอกาสให้เสนอและเลือกเอง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202023" value="L3: มอบหมายตามศักยภาพ" required>
+                            <span class="option-text">L3: มอบหมายตามศักยภาพ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202023" value="L4: ทำตามตำแหน่งและขั้นตอน" required>
+                            <span class="option-text">L4: ทำตามตำแหน่งและขั้นตอน</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 6: Leadership Role -->
+            <div class="question-card" data-question="6">
+                <div class="question-content">
+                    <h2 class="question-title">👑 คุณมองบทบาทผู้นำเป็นอย่างไร..?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202024" value="L1: เป็นผู้สั่งการสูงสุด" required>
+                            <span class="option-text">L1: เป็นผู้สั่งการสูงสุด</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202024" value="L2: เป็นผู้ประสานงานต่างๆ" required>
+                            <span class="option-text">L2: เป็นผู้ประสานงานต่างๆ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202024" value="L3: เป็นศูนย์รวมใจ" required>
+                            <span class="option-text">L3: เป็นศูนย์รวมใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202024" value="L4: เป็นผู้รักษาระเบียบและกฎเกณฑ์" required>
+                            <span class="option-text">L4: เป็นผู้รักษาระเบียบและกฎเกณฑ์</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 7: Work Mistakes -->
+            <div class="question-card" data-question="7">
+                <div class="question-content">
+                    <h2 class="question-title">⚠️ ถ้ามีคนทำงานผิดพลาดบ่อย คุณจะ…?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202025" value="L1: ตักเตือนอย่างเด็ดขาด" required>
+                            <span class="option-text">L1: ตักเตือนอย่างเด็ดขาด</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202025" value="L2: คุยกับทีมและหาทางออกร่วมกัน" required>
+                            <span class="option-text">L2: คุยกับทีมและหาทางออกร่วมกัน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202025" value="L3: เสริมแรงบวกเพื่อให้กำลังใจ" required>
+                            <span class="option-text">L3: เสริมแรงบวกเพื่อให้กำลังใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202025" value="L4: ใช้ระบบลงโทษหรือให้รางวัลเข้าควบคุม" required>
+                            <span class="option-text">L4: ใช้ระบบลงโทษหรือให้รางวัลเข้าควบคุม</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 8: Public Communication -->
+            <div class="question-card" data-question="8">
+                <div class="question-content">
+                    <h2 class="question-title">📢 ถ้าต้องเลือกวิธีสื่อสารนโยบายต่อสาธารณะ คุณจะ…?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202026" value="L1: ประกาศนโยบายเองอย่างชัดเจน" required>
+                            <span class="option-text">L1: ประกาศนโยบายเองอย่างชัดเจน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202026" value="L2: จัดเวทีพูดคุยต่อสาธารณะ" required>
+                            <span class="option-text">L2: จัดเวทีพูดคุยต่อสาธารณะ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202026" value="L3: ใช้เรื่องเล่าเพื่อสร้างแรงศรัทธา" required>
+                            <span class="option-text">L3: ใช้เรื่องเล่าเพื่อสร้างแรงศรัทธา</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202026" value="L4: แถลงตามเอกสารอย่างเป็นทางการ" required>
+                            <span class="option-text">L4: แถลงตามเอกสารอย่างเป็นทางการ</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 9: High-Risk Decisions -->
+            <div class="question-card" data-question="9">
+                <div class="question-content">
+                    <h2 class="question-title">⚡ เมื่อคุณต้องตัดสินใจเรื่องสำคัญที่มีความเสี่ยงสูงคุณจะเลือกใช้วิธีใด?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202027" value="L1: ตัดสินใจเองอย่างเด็ดขาด โดยไม่ฟังความคิดเห็นผู้อื่น" required>
+                            <span class="option-text">L1: ตัดสินใจเองอย่างเด็ดขาด โดยไม่ฟังความคิดเห็นผู้อื่น</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202027" value="L2: ปรึกษาทีมงานหรือผู้เกี่ยวข้องก่อนตัดสินใจ" required>
+                            <span class="option-text">L2: ปรึกษาทีมงานหรือผู้เกี่ยวข้องก่อนตัดสินใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202027" value="L3: ใช้การวิเคราะห์ข้อมูลและวิสัยทัศน์เพื่อหาแนวทางที่สร้างแรงบันดาลใจ" required>
+                            <span class="option-text">L3: ใช้การวิเคราะห์ข้อมูลและวิสัยทัศน์เพื่อหาแนวทางที่สร้างแรงบันดาลใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202027" value="L4: ตั้งมาตรการหรือขั้นตอนป้องกันความผิดพลาดก่อนตัดสินใจ" required>
+                            <span class="option-text">L4: ตั้งมาตรการหรือขั้นตอนป้องกันความผิดพลาดก่อนตัดสินใจ</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 10: Admired Leaders -->
+            <div class="question-card" data-question="10">
+                <div class="question-content">
+                    <h2 class="question-title">⭐ ผู้นำแบบไหนที่คุณชื่นชม…?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202028" value="L1: ผู้นำที่มีความเด็ดขาดและเข้มแข็ง" required>
+                            <span class="option-text">L1: ผู้นำที่มีความเด็ดขาดและเข้มแข็ง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202028" value="L2: ผู้นำที่ฟังและเปิดโอกาส" required>
+                            <span class="option-text">L2: ผู้นำที่ฟังและเปิดโอกาส</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202028" value="L3: ผู้นำที่มีวิศัยทัศน์และสร้างแรงศรัทธา" required>
+                            <span class="option-text">L3: ผู้นำที่มีวิศัยทัศน์และสร้างแรงศรัทธา</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202028" value="L4: ผู้นำที่เข้มงวดกับระเบียบวินัย" required>
+                            <span class="option-text">L4: ผู้นำที่เข้มงวดกับระเบียบวินัย</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 11: One Month National Problem -->
+            <div class="question-card" data-question="11">
+                <div class="question-content">
+                    <h2 class="question-title">🏛️ ถ้ามีเวลา 1 เดือนในการแก้ปัญหาระดับชาติ คุณจะ…?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202029" value="L1: ใช้อำนาจออกนโยบายทันที" required>
+                            <span class="option-text">L1: ใช้อำนาจออกนโยบายทันที</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202029" value="L2: เปิดให้ทุกภาคส่วนมีส่วนร่วม" required>
+                            <span class="option-text">L2: เปิดให้ทุกภาคส่วนมีส่วนร่วม</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202029" value="L3: สร้างวิสัยทัศน์ใหม่ให้ประชาชน" required>
+                            <span class="option-text">L3: สร้างวิสัยทัศน์ใหม่ให้ประชาชน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202029" value="L4: ใช้ขั้นตอนระบบราชการ" required>
+                            <span class="option-text">L4: ใช้ขั้นตอนระบบราชการ</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 12: National Goals -->
+            <div class="question-card" data-question="12">
+                <div class="question-content">
+                    <h2 class="question-title">🎯 ถ้าเป้าหมายใหญ่ของชาติยากที่จะสำเร็จ คุณจะ…?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202030" value="L1: กำหนดวิธีแล้วสั่งการ" required>
+                            <span class="option-text">L1: กำหนดวิธีแล้วสั่งการ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202030" value="L2: ฟังเสียงประชาชนแล้วนำมาปรับแผน" required>
+                            <span class="option-text">L2: ฟังเสียงประชาชนแล้วนำมาปรับแผน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202030" value="L3: พูดสร้างวิสัยทัศน์ให้ประชาชนมีความเชื่อมั่น" required>
+                            <span class="option-text">L3: พูดสร้างวิสัยทัศน์ให้ประชาชนมีความเชื่อมั่น</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202030" value="L4: ทำตามแผนทีละขั้นตอน" required>
+                            <span class="option-text">L4: ทำตามแผนทีละขั้นตอน</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 13: Political Crisis -->
+            <div class="question-card" data-question="13">
+                <div class="question-content">
+                    <h2 class="question-title">🏛️ พรรคภูมิใจไทยถอนตัวจากรัฐบาล ทำให้เสียงรัฐบาลไม่มั่นคง คุณจะทำยังไง?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202031" value="L1: ใช้อำนาจในฐานะรัฐบาลรวบรวมเสียงสนับสนุนผ่านการต่อรองตำแหน่ง" required>
+                            <span class="option-text">L1: ใช้อำนาจในฐานะรัฐบาลรวบรวมเสียงสนับสนุนผ่านการต่อรองตำแหน่ง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202031" value="L2: ตั้งโต๊ะเจรจากับทุกพรรคเพื่อหาข้อตกลงร่วม" required>
+                            <span class="option-text">L2: ตั้งโต๊ะเจรจากับทุกพรรคเพื่อหาข้อตกลงร่วม</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202031" value="L3: ออกมาเคลื่อนไหวกดดันให้มีการเลือกตั้งใหม่" required>
+                            <span class="option-text">L3: ออกมาเคลื่อนไหวกดดันให้มีการเลือกตั้งใหม่</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202031" value="L4: วิเคราะห์ความเสี่ยงและเสนอโมเดลรัฐบาลผสมแบบใหม่ที่อยู่รอดได้" required>
+                            <span class="option-text">L4: วิเคราะห์ความเสี่ยงและเสนอโมเดลรัฐบาลผสมแบบใหม่ที่อยู่รอดได้</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 14: Thaksin Case -->
+            <div class="question-card" data-question="14">
+                <div class="question-content">
+                    <h2 class="question-title">⚖️ คดีทักษิณและสิทธิพิเศษนักโทษ โดยสังคมมีการตั้งคำถามว่ามีการปฏิบัติพิเศษให้อดีตนายกฯ คุณมีวิธีจัดการอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202032" value="L1: เสนอปรับกฎเรือนจำให้บังคับใช้มาตรฐานเดียวกับทุกนักโทษ" required>
+                            <span class="option-text">L1: เสนอปรับกฎเรือนจำให้บังคับใช้มาตรฐานเดียวกับทุกนักโทษ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202032" value="L2: เปิดเวทีสาธารณะให้ทุกฝ่ายร่วมแสดงความเห็นต่อระบบยุติธรรม" required>
+                            <span class="option-text">L2: เปิดเวทีสาธารณะให้ทุกฝ่ายร่วมแสดงความเห็นต่อระบบยุติธรรม</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202032" value="L3: รวมพลังประชาชนเรียกร้องความยุติธรรมเท่าเทียม" required>
+                            <span class="option-text">L3: รวมพลังประชาชนเรียกร้องความยุติธรรมเท่าเทียม</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202032" value="L4: ศึกษาข้อมูลเปรียบเทียบการจัดการนักโทษการเมืองในประเทศอื่นแล้วเสนอปรับนโยบาย" required>
+                            <span class="option-text">L4: ศึกษาข้อมูลเปรียบเทียบการจัดการนักโทษการเมืองในประเทศอื่นแล้วเสนอปรับนโยบาย</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 15: Thai-Cambodia Relations -->
+            <div class="question-card" data-question="15">
+                <div class="question-content">
+                    <h2 class="question-title">🎙️ กรณีคลิปเสียงรั่วที่กระทบต่อความสัมพันธ์ไทย–กัมพูชา ทำให้เกิดวิกฤตการเมือง คุณจะทำอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202033" value="L1: ตั้งคณะกรรมการสอบสวนทันทีและประกาศผลให้ประชาชนทราบ" required>
+                            <span class="option-text">L1: ตั้งคณะกรรมการสอบสวนทันทีและประกาศผลให้ประชาชนทราบ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202033" value="L2: จัดโต๊ะเจรจาร่วมระหว่างไทย–กัมพูชาและภาคประชาชน" required>
+                            <span class="option-text">L2: จัดโต๊ะเจรจาร่วมระหว่างไทย–กัมพูชาและภาคประชาชน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202033" value="L3: รณรงค์เรียกร้องความโปร่งใสและให้ผู้นำชี้แจงต่อประชาชน" required>
+                            <span class="option-text">L3: รณรงค์เรียกร้องความโปร่งใสและให้ผู้นำชี้แจงต่อประชาชน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202033" value="L4: วิเคราะห์ผลกระทบระยะยาวด้านความมั่นคงและเสนอแผนฟื้นความสัมพันธ์" required>
+                            <span class="option-text">L4: วิเคราะห์ผลกระทบระยะยาวด้านความมั่นคงและเสนอแผนฟื้นความสัมพันธ์</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 16: Ethnic Protection Law -->
+            <div class="question-card" data-question="16">
+                <div class="question-content">
+                    <h2 class="question-title">👥 สภามีการผลักดันร่างกฎหมายคุ้มครองกลุ่มชาติพันธุ์ แต่มีข้อถกเถียงเรื่องสิทธิและคำจำกัดความ คุณจะเลือกทางไหน?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202034" value="L1: ผลักดันให้ร่างกฎหมายเข้าสภาโดยเร็ว แม้จะมีข้อถกเถียง" required>
+                            <span class="option-text">L1: ผลักดันให้ร่างกฎหมายเข้าสภาโดยเร็ว แม้จะมีข้อถกเถียง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202034" value="L2: จัดเวทีปรึกษาหารือกับผู้นำกลุ่มชาติพันธุ์และประชาชน" required>
+                            <span class="option-text">L2: จัดเวทีปรึกษาหารือกับผู้นำกลุ่มชาติพันธุ์และประชาชน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202034" value="L3: เคลื่อนไหวเรียกร้องสิทธิกลุ่มชาติพันธุ์ผ่านการชุมนุมและสื่อ" required>
+                            <span class="option-text">L3: เคลื่อนไหวเรียกร้องสิทธิกลุ่มชาติพันธุ์ผ่านการชุมนุมและสื่อ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202034" value="L4: ศึกษากฎหมายเปรียบเทียบกับประเทศอื่นและเขียนร่างใหม่ที่สมดุล" required>
+                            <span class="option-text">L4: ศึกษากฎหมายเปรียบเทียบกับประเทศอื่นและเขียนร่างใหม่ที่สมดุล</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 17: Economic Recovery -->
+            <div class="question-card" data-question="17">
+                <div class="question-content">
+                    <h2 class="question-title">📊 ดัชนีความเชื่อมั่นผู้บริโภคลดต่ำสุดในรอบกว่า 2 ปี คุณมีวิธีการที่จะฟื้นเศรษฐกิจอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202035" value="L1: ออกนโยบายกระตุ้นเร่งด่วน เช่น โครงการ \"คนละครึ่ง\"" required>
+                            <span class="option-text">L1: ออกนโยบายกระตุ้นเร่งด่วน เช่น โครงการ "คนละครึ่ง"</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202035" value="L2: ร่วมมือกับผู้ประกอบการและประชาชนในการออกไอเดียแก้ปัญหา" required>
+                            <span class="option-text">L2: ร่วมมือกับผู้ประกอบการและประชาชนในการออกไอเดียแก้ปัญหา</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202035" value="L3: ใช้โซเชียลสร้างกระแส เพื่อกดดันรัฐให้เปลี่ยนทีมเศรษฐกิจ" required>
+                            <span class="option-text">L3: ใช้โซเชียลสร้างกระแส เพื่อกดดันรัฐให้เปลี่ยนทีมเศรษฐกิจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202035" value="L4: วิเคราะห์สาเหตุเชิงโครงสร้างและเสนอปฏิรูประบบเศรษฐกิจระยะยาว" required>
+                            <span class="option-text">L4: วิเคราะห์สาเหตุเชิงโครงสร้างและเสนอปฏิรูประบบเศรษฐกิจระยะยาว</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 18: No-Confidence Motion -->
+            <div class="question-card" data-question="18">
+                <div class="question-content">
+                    <h2 class="question-title">🗳️ ถ้าฝ่ายค้านเตรียมยื่นอภิปรายไม่ไว้วางใจรัฐบาล คุณจะจัดการยังไง?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202036" value="L1: ใช้กลไกพรรครวบรวมเสียงในสภาเพื่อคงอำนาจต่อ" required>
+                            <span class="option-text">L1: ใช้กลไกพรรครวบรวมเสียงในสภาเพื่อคงอำนาจต่อ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202036" value="L2: ประสานงานกับฝ่ายค้าน–ฝ่ายรัฐบาล หาทางพูดคุยป้องกันการแตกหัก" required>
+                            <span class="option-text">L2: ประสานงานกับฝ่ายค้าน–ฝ่ายรัฐบาล หาทางพูดคุยป้องกันการแตกหัก</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202036" value="L3: ระดมมวลชนกดดันให้ ส.ส. โหวตไม่ไว้วางใจ" required>
+                            <span class="option-text">L3: ระดมมวลชนกดดันให้ ส.ส. โหวตไม่ไว้วางใจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202036" value="L4: วิเคราะห์โอกาสและความเสี่ยงของการเปลี่ยนรัฐบาล แล้วเสนอทางออกอย่างมีเหตุผล" required>
+                            <span class="option-text">L4: วิเคราะห์โอกาสและความเสี่ยงของการเปลี่ยนรัฐบาล แล้วเสนอทางออกอย่างมีเหตุผล</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 19: Youth Political Reform -->
+            <div class="question-card" data-question="19">
+                <div class="question-content">
+                    <h2 class="question-title">🧑‍🎓 ถ้าคนรุ่นใหม่ออกมาเรียกร้องปฏิรูปการเมือง คุณจะตอบสนองอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202037" value="L1: ตั้งโครงการสภาเด็กและเยาวชนอย่างเป็นทางการ" required>
+                            <span class="option-text">L1: ตั้งโครงการสภาเด็กและเยาวชนอย่างเป็นทางการ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202037" value="L2: เปิดพื้นที่ให้เยาวชนแสดงความคิดเห็นต่อรัฐสภาโดยตรง" required>
+                            <span class="option-text">L2: เปิดพื้นที่ให้เยาวชนแสดงความคิดเห็นต่อรัฐสภาโดยตรง</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202037" value="L3: ร่วมขบวนรณรงค์และให้การสนับสนุนเยาวชน" required>
+                            <span class="option-text">L3: ร่วมขบวนรณรงค์และให้การสนับสนุนเยาวชน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202037" value="L4: ศึกษาข้อมูลเชิงสถิติว่าคนรุ่นใหม่ต้องการอะไร แล้วเสนอเป็นนโยบาย" required>
+                            <span class="option-text">L4: ศึกษาข้อมูลเชิงสถิติว่าคนรุ่นใหม่ต้องการอะไร แล้วเสนอเป็นนโยบาย</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 20: Government Corruption -->
+            <div class="question-card" data-question="20">
+                <div class="question-content">
+                    <h2 class="question-title">💰 คดีทุจริตภาครัฐยังคงเป็นประเด็นร้อน คุณจะทำอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202038" value="L1: ดำเนินคดีทุจริตอย่างเด็ดขาดและสร้างกลไกป้องกันการคอร์รัปชัน" required>
+                            <span class="option-text">L1: ดำเนินคดีทุจริตอย่างเด็ดขาดและสร้างกลไกป้องกันการคอร์รัปชัน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202038" value="L2: ตั้งเครือข่ายภาคประชาชนเพื่อร่วมตรวจสอบงบประมาณรัฐ" required>
+                            <span class="option-text">L2: ตั้งเครือข่ายภาคประชาชนเพื่อร่วมตรวจสอบงบประมาณรัฐ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202038" value="L3: นำประชาชนออกมาเคลื่อนไหว ต่อต้านคอร์รัปชัน" required>
+                            <span class="option-text">L3: นำประชาชนออกมาเคลื่อนไหว ต่อต้านคอร์รัปชัน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202038" value="L4: วิเคราะห์โครงสร้างระบบราชการเพื่อหาจุดอ่อนที่ก่อให้เกิดทุจริต" required>
+                            <span class="option-text">L4: วิเคราะห์โครงสร้างระบบราชการเพื่อหาจุดอ่อนที่ก่อให้เกิดทุจริต</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 21: ASEAN Labor Issues -->
+            <div class="question-card" data-question="21">
+                <div class="question-content">
+                    <h2 class="question-title">🌏 กรณีที่เพื่อนบ้านในอาเซียนกำลังกดดันเรื่องแรงงานข้ามชาติและชายแดน คุณจะทำอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202039" value="L1: ทำบันทึกข้อตกลง MOU แก้ปัญหาแรงงานข้ามชาติทันที" required>
+                            <span class="option-text">L1: ทำบันทึกข้อตกลง MOU แก้ปัญหาแรงงานข้ามชาติทันที</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202039" value="L2: ประสาน NGO และแรงงานในการสร้างข้อเสนอร่วม" required>
+                            <span class="option-text">L2: ประสาน NGO และแรงงานในการสร้างข้อเสนอร่วม</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202039" value="L3: จัดแคมเปญรณรงค์สิทธิมนุษยชนแรงงาน" required>
+                            <span class="option-text">L3: จัดแคมเปญรณรงค์สิทธิมนุษยชนแรงงาน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202039" value="L4: วิเคราะห์แนวโน้มการย้ายถิ่นในอาเซียนและสร้างนโยบายแรงงานระยะยาว" required>
+                            <span class="option-text">L4: วิเคราะห์แนวโน้มการย้ายถิ่นในอาเซียนและสร้างนโยบายแรงงานระยะยาว</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Question 22: Populist Policies -->
+            <div class="question-card" data-question="22">
+                <div class="question-content">
+                    <h2 class="question-title">💸 ฝ่ายค้านวิจารณ์โครงการ "แจกเงินช่วยเหลือ" ว่าเป็นประชานิยมเกินไป คุณจะทำอย่างไร?</h2>
+                    <div class="options-grid">
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202040" value="L1: ผลักดันโครงการแจกเงินทันทีเพื่อกระตุ้นเศรษฐกิจ" required>
+                            <span class="option-text">L1: ผลักดันโครงการแจกเงินทันทีเพื่อกระตุ้นเศรษฐกิจ</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202040" value="L2: จัดเวทีฟังความเห็นชาวบ้านว่าต้องการแบบไหน" required>
+                            <span class="option-text">L2: จัดเวทีฟังความเห็นชาวบ้านว่าต้องการแบบไหน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202040" value="L3: ออกมาปลุกกระแสสังคมว่าประชานิยมคือสิทธิของประชาชน" required>
+                            <span class="option-text">L3: ออกมาปลุกกระแสสังคมว่าประชานิยมคือสิทธิของประชาชน</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="entry.2020202040" value="L4: ศึกษาผลกระทบระยะยาวของประชานิยมต่อเศรษฐกิจ แล้วออกแบบมาตรการที่ยั่งยืนกว่า" required>
+                            <span class="option-text">L4: ศึกษาผลกระทบระยะยาวของประชานิยมต่อเศรษฐกิจ แล้วออกแบบมาตรการที่ยั่งยืนกว่า</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="button" class="btn btn-next" onclick="nextQuestion()">ถัดไป</button>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="question-card" data-question="23">
+                <div class="question-content">
+                    <h2 class="question-title">🎉 เสร็จสิ้น!</h2>
+                    <p class="completion-text">ขอบคุณที่ทำแบบสอบถาม คลิกปุ่มส่งเพื่อดูผลลัพธ์</p>
+                </div>
+                <div class="navigation-buttons">
+                    <button type="button" class="btn btn-prev" onclick="previousQuestion()">ย้อนกลับ</button>
+                    <button type="submit" class="btn btn-submit">ส่งคำตอบ</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Loading Screen -->
+        <div id="loadingScreen" class="loading-screen">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>กำลังส่งคำตอบ...</p>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="successScreen" class="success-screen">
+            <div class="success-content">
+                <div class="success-icon">✅</div>
+                <h2>ส่งคำตอบสำเร็จ!</h2>
+                <p>ผลอยู่ในอีเมลล์ ดูผลสิ!!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
